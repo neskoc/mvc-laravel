@@ -2,55 +2,46 @@
 
 declare(strict_types=1);
 
-namespace neskoc\Controller;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
-use neskoc\Yatzy\YatzyGame;
+use App\Models\Yatzy\YatzyGame;
 
 /**
  * Controller for a Yatzy route = controller class.
  */
 class YatzyController extends Controller
 {
-    public function __invoke(): View
+    public function __invoke(Request $request): View
     {
-        return $this->initialize();
+        return $this->initialize($request);
     }
 
-    public function initialize(): View
+    public function initialize(Request $request): View
     {
         $callable = new YatzyGame();
-        $_SESSION['yatzy-game'] = serialize($callable);
+        $request->session()->put('yatzy-game', serialize($callable));
 
-        $body = $callable->initialize();
-
-        return $this->gamePsr17Factory($body);
+        return $callable->initialize($request);
     }
 
-    public function playHand(): View
+    public function playHand(Request $request)
     {
-        $callable = unserialize($_SESSION['yatzy-game']);
-        $body = $callable->playHand();
-        $_SESSION['yatzy-game'] = serialize($callable);
-
-        return $this->gamePsr17Factory($body);
+        $callable = unserialize($request->session()->get('yatzy-game'));
+        return $callable->playHand($request);
     }
 
-    public function saveHand(): View
+    public function saveHand(Request $request)
     {
-        $callable = unserialize($_SESSION['yatzy-game']);
-        $body = $callable->saveHand();
-        $_SESSION['yatzy-game'] = serialize($callable);
-
-        return $this->gamePsr17Factory($body);
+        $callable = unserialize($request->session()->get('yatzy-game'));
+        return $callable->saveHand($request);
     }
 
-    public function gameOver(): View
+    public function gameOver(Request $request): View
     {
-        $callable = unserialize($_SESSION['yatzy-game']);
-        $body = $callable->gameOver();
-
-        return $this->gamePsr17Factory($body);
+        $callable = unserialize($request->session()->get('yatzy-game'));
+        return $callable->gameOver();
     }
 }

@@ -8,11 +8,9 @@ declare(strict_types=1);
 
 namespace App\Models\Yatzy;
 
-use neskoc\Dice\NewDiceHand;
-
-use function Mos\Functions\renderView;
-use function Mos\Functions\url;
-use function Mos\Functions\redirectTo;
+use Illuminate\Http\Request;
+use Illuminate\View\View;
+use App\Models\Dice\NewDiceHand;
 
 class YatzyGame
 {
@@ -36,18 +34,16 @@ class YatzyGame
         $this->diceHand = new NewDiceHand(5);
     }
 
-    public function initialize(): string
+    public function initialize(Request $request): View
     {
         $data = [
             "header" => "Yatzy (startsida)"
         ];
 
-        $body = renderView("layout/yatzy.php", $data);
-
-        return $body;
+        return view("yatzy", $data);
     }
 
-    public function playHand(): string
+    public function playHand(Request $request)
     {
         $this->savedDices = $_POST['dice'] ?? [];
         $this->diceHand->rollSelectively($this->savedDices);
@@ -69,8 +65,8 @@ class YatzyGame
         $this->yatzyTable->setLastHand($this->diceHand->getLastHand());
         $this->rollNr += 1;
         if ($this->rollNr === 3) {
-            $_SESSION['yatzy-game'] = serialize($this);
-            redirectTo('save');
+            $request->session()->put('yatzy-game', serialize($this));
+            return redirect()->route('saveYatzy');
             exit();
         }
 
@@ -86,12 +82,11 @@ class YatzyGame
             "debug" => ''
         ];
 
-        $body = renderView("layout/yatzyPlayHand.php", $data);
-
-        return $body;
+        $request->session()->put('yatzy-game', serialize($this));
+        return view("yatzyPlayHand", $data);
     }
 
-    public function saveHand(): string
+    public function saveHand(Request $request)
     {
         if (isset($_POST['keep'])) {
             $diceHandArray = $this->diceHand->getLastHand();
@@ -120,13 +115,14 @@ class YatzyGame
                 $this->round += 1;
             }
             if ($finishedCounter === 0) {
-                $_SESSION['yatzy-game'] = serialize($this);
-                redirectTo('game-over');
+                $request->session()->put('yatzy-game', serialize($this));
+                return redirect()->route('game-over');
                 exit();
             }
-            $_SESSION['yatzy-game'] = serialize($this);
+            $request->session()->put('yatzy-game', serialize($this));
             if (!headers_sent()) {
-                redirectTo('play');
+                return redirect()->route('play-yatzy');
+                var_dump("Header already sent");
                 exit();
             }
         }
@@ -144,12 +140,11 @@ class YatzyGame
             "debug" => '' // $debug
         ];
 
-        $body = renderView("layout/yatzySaveHand.php", $data);
-
-        return $body;
+        $request->session()->put('yatzy-game', serialize($this));
+        return view("yatzySaveHand", $data);
     }
 
-    public function gameOver(): string
+    public function gameOver(): View
     {
         $yatzyTable = $this->yatzyTable->showYatzyTable($this->yatzyTable);
 
@@ -161,9 +156,7 @@ class YatzyGame
             "debug" => ''
         ];
 
-        $body = renderView("layout/yatzyGameOver.php", $data);
-
-        return $body;
+        return view("yatzyGameOver", $data);
     }
 
     private function showHandChoices(array $graphicalHand, bool $withCheckboxes = true): string
