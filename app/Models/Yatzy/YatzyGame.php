@@ -67,7 +67,6 @@ class YatzyGame
         if ($this->rollNr === 3) {
             $request->session()->put('yatzy-game', serialize($this));
             return redirect()->route('saveYatzy');
-            exit();
         }
 
         // $debug = json_encode($this->savedDices) . json_encode($res);
@@ -117,13 +116,10 @@ class YatzyGame
             if ($finishedCounter === 0) {
                 $request->session()->put('yatzy-game', serialize($this));
                 return redirect()->route('game-over');
-                exit();
             }
             $request->session()->put('yatzy-game', serialize($this));
             if (!headers_sent()) {
                 return redirect()->route('play-yatzy');
-                var_dump("Header already sent");
-                exit();
             }
         }
 

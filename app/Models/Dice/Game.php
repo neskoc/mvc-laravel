@@ -117,7 +117,6 @@ class Game
 
         if (!$lost && !isset($_POST['stop']) && !$playComputerHand) {
             $request->session()->put('game', serialize($this));
-            // $body = renderView("layout/hand.php", $data);
             $view = view("hand", $data);
         } else {
             $this->addWin($lost);
@@ -125,7 +124,6 @@ class Game
             $data["header"] = "Result round {$this->rounds}";
             $data["score"] = $this->getScore();
             $data["result"] = $lost ? "You lost this round" : "You won this round";
-            // $body = renderView("layout/result.php", $data);
             $view = view("result", $data);
         }
 

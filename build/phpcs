@@ -1,0 +1,139 @@
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+------------------------------------------------------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a top-level vendor name)
+------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/database/migrations/2014_10_12_100000_create_password_resets_table.php
+----------------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+----------------------------------------------------------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a top-level vendor name)
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/database/migrations/2014_10_12_000000_create_users_table.php
+------------------------------------------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+------------------------------------------------------------------------------------------------------------------------
+ 7 | ERROR | Each class must be in a namespace of at least one level (a top-level vendor name)
+------------------------------------------------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/public/index.php
+----------------------------------------------------------------------------
+FOUND 8 ERRORS AFFECTING 4 LINES
+----------------------------------------------------------------------------
+ 28 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 28 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 29 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 29 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 43 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 43 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 56 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 56 | ERROR | [x] Expected at least 1 space after "."; 0 found
+----------------------------------------------------------------------------
+PHPCBF CAN FIX THE 8 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/config/database.php
+-------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 1 LINE
+-------------------------------------------------------------------------------
+ 126 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 126 | ERROR | [x] Expected at least 1 space after "."; 0 found
+-------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/config/filesystems.php
+----------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------------------
+ 41 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 41 | ERROR | [x] Expected at least 1 space after "."; 0 found
+----------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/config/session.php
+------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 1 LINE
+------------------------------------------------------------------------------
+ 131 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 131 | ERROR | [x] Expected at least 1 space after "."; 0 found
+------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/app/Console/Kernel.php
+----------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------------------
+ 37 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 37 | ERROR | [x] Expected at least 1 space after "."; 0 found
+----------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/app/Models/User.php
+-------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-------------------------------------------------------------------------------
+ 12 | ERROR | [x] Each imported trait must have its own "use" import statement
+-------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 1 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+-------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/server.php
+----------------------------------------------------------------------
+FOUND 6 ERRORS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 17 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 17 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 17 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 17 | ERROR | [x] Expected at least 1 space after "."; 0 found
+ 21 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 21 | ERROR | [x] Expected at least 1 space after "."; 0 found
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 6 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/tests/Unit/ExampleTest.php
+--------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+--------------------------------------------------------------------------------------
+ 14 | ERROR | Method name "ExampleTest::test_example" is not in camel caps format
+--------------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/tests/CreatesApplication.php
+----------------------------------------------------------------------------------------
+FOUND 2 ERRORS AFFECTING 1 LINE
+----------------------------------------------------------------------------------------
+ 16 | ERROR | [x] Expected at least 1 space before "."; 0 found
+ 16 | ERROR | [x] Expected at least 1 space after "."; 0 found
+----------------------------------------------------------------------------------------
+PHPCBF CAN FIX THE 2 MARKED SNIFF VIOLATIONS AUTOMATICALLY
+----------------------------------------------------------------------------------------
+
+
+FILE: /home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/framework/tests/Feature/ExampleTest.php
+-----------------------------------------------------------------------------------------
+FOUND 1 ERROR AFFECTING 1 LINE
+-----------------------------------------------------------------------------------------
+ 15 | ERROR | Method name "ExampleTest::test_example" is not in camel caps format
+-----------------------------------------------------------------------------------------
+
+Time: 2.01 secs; Memory: 8MB
+
