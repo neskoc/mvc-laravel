@@ -135,5 +135,5 @@ FOUND 1 ERROR AFFECTING 1 LINE
  15 | ERROR | Method name "ExampleTest::test_example" is not in camel caps format
 ---------------------------------------------------------------------------------------------
 
-Time: 1.78 secs; Memory: 10MB
+Time: 1.56 secs; Memory: 8MB
 
