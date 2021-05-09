@@ -4,6 +4,6 @@ parameters:
         - config
         - app
         - routes
-        #- test
+        - tests
     bootstrapFiles:
         - .phpstan.constants.php

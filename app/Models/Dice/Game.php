@@ -34,7 +34,7 @@ class Game
         $this->computerPlayer = $computerPlayer;
     }
 
-    public function newGame(): View
+    public function newGame()
     {
         $data = [
             "header" => "Game 21 (new game)",
@@ -44,7 +44,7 @@ class Game
         return view("game21", $data);
     }
 
-    public function playGame(): View
+    public function playGame()
     {
         $data = [
             "header" => "Game 21 (play)",
@@ -67,7 +67,7 @@ class Game
         return $this->roll($request);
     }
 
-    public function roll(Request $request): View
+    public function roll(Request $request)
     {
         $lost = false;
 

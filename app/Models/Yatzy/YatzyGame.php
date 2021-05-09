@@ -34,7 +34,7 @@ class YatzyGame
         $this->diceHand = new NewDiceHand(5);
     }
 
-    public function initialize(Request $request): View
+    public function initialize()
     {
         $data = [
             "header" => "Yatzy (startsida)"
@@ -140,7 +140,7 @@ class YatzyGame
         return view("yatzySaveHand", $data);
     }
 
-    public function gameOver(): View
+    public function gameOver()
     {
         $yatzyTable = $this->yatzyTable->showYatzyTable($this->yatzyTable);
 

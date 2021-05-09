@@ -1,6 +1,6 @@
 <?php
 
-namespace neskoc\Router;
+namespace App\Routes;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Game21Controller;

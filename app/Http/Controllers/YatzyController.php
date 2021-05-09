@@ -24,7 +24,7 @@ class YatzyController extends Controller
         $callable = new YatzyGame();
         $request->session()->put('yatzy-game', serialize($callable));
 
-        return $callable->initialize($request);
+        return $callable->initialize();
     }
 
     public function playHand(Request $request)

@@ -1,29 +1,3 @@
- ------ ------------------------------------------------------------------------------------------------------------------ 
-  Line   app/Http/Middleware/Authenticate.php                                                                              
- ------ ------------------------------------------------------------------------------------------------------------------ 
-  17     Method App\Http\Middleware\Authenticate::redirectTo() should return string|null but return statement is missing.  
- ------ ------------------------------------------------------------------------------------------------------------------ 
 
- ------ ---------------------------------------------------------------------------------------------------------------------------------------------------------- 
-  Line   app/Models/Dice/Game.php                                                                                                                                  
- ------ ---------------------------------------------------------------------------------------------------------------------------------------------------------- 
-  44     Method App\Models\Dice\Game::newGame() should return Illuminate\View\View but returns Illuminate\Contracts\View\Factory|Illuminate\Contracts\View\View.   
-  56     Method App\Models\Dice\Game::playGame() should return Illuminate\View\View but returns Illuminate\Contracts\View\Factory|Illuminate\Contracts\View\View.  
-  130    Method App\Models\Dice\Game::roll() should return Illuminate\View\View but returns Illuminate\Contracts\View\Factory|Illuminate\Contracts\View\View.      
- ------ ---------------------------------------------------------------------------------------------------------------------------------------------------------- 
-
- ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
-  Line   app/Models/Yatzy/YatzyGame.php                                                                                                                                    
- ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
-  43     Method App\Models\Yatzy\YatzyGame::initialize() should return Illuminate\View\View but returns Illuminate\Contracts\View\Factory|Illuminate\Contracts\View\View.  
-  155    Method App\Models\Yatzy\YatzyGame::gameOver() should return Illuminate\View\View but returns Illuminate\Contracts\View\Factory|Illuminate\Contracts\View\View.    
- ------ ------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
-
- ------ --------------------------- 
-  Line   routes/console.php         
- ------ --------------------------- 
-  18     Undefined variable: $this  
- ------ --------------------------- 
-
- [ERROR] Found 7 errors                                                                                                 
+ [OK] No errors                                                                                                         
 
