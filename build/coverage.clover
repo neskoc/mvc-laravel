@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1621422900">
-  <project timestamp="1621422900">
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/CreatesApplication.php">
+<coverage generated="1621463154">
+  <project timestamp="1621463154">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/CreatesApplication.php">
       <class name="Tests\CreatesApplication" namespace="global">
-        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
       </class>
-      <line num="14" type="method" name="createApplication" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="16" type="stmt" count="1"/>
-      <line num="18" type="stmt" count="1"/>
-      <line num="20" type="stmt" count="1"/>
-      <metrics loc="22" ncloc="17" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      <line num="14" type="method" name="createApplication" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="16" type="stmt" count="0"/>
+      <line num="18" type="stmt" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <metrics loc="22" ncloc="17" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Feature/ExampleTest.php">
-      <class name="Tests\Feature\ExampleTest" namespace="global">
-        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/TestCase.php">
+      <class name="Tests\TestCase" namespace="global">
+        <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
       </class>
-      <line num="15" type="method" name="testExample" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="17" type="stmt" count="1"/>
-      <line num="19" type="stmt" count="1"/>
-      <line num="20" type="stmt" count="1"/>
-      <metrics loc="21" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="3" elements="4" coveredelements="4"/>
+      <metrics loc="10" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Dice/DiceComputerPlayerTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Dice/DiceComputerPlayerTest.php">
       <class name="App\Models\Dice\DiceComputerPlayerTest" namespace="global">
         <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
       </class>
@@ -38,7 +34,7 @@
       <line num="35" type="stmt" count="1"/>
       <metrics loc="36" ncloc="29" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Dice/DiceDiceHandTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Dice/DiceDiceHandTest.php">
       <class name="App\Models\Dice\DiceDiceHandTest" namespace="global">
         <metrics complexity="10" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="34" elements="39" coveredelements="39"/>
       </class>
@@ -83,7 +79,7 @@
       <line num="73" type="stmt" count="1"/>
       <metrics loc="74" ncloc="68" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="34" elements="39" coveredelements="39"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Dice/DiceDiceTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Dice/DiceDiceTest.php">
       <class name="App\Models\Dice\DiceDiceTest" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="16" coveredelements="16"/>
       </class>
@@ -105,7 +101,7 @@
       <line num="38" type="stmt" count="1"/>
       <metrics loc="39" ncloc="33" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="15" elements="16" coveredelements="16"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Dice/DiceGameTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Dice/DiceGameTest.php">
       <class name="App\Models\Dice\DiceGameTest" namespace="global">
         <metrics complexity="6" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="44" coveredelements="44"/>
       </class>
@@ -155,7 +151,7 @@
       <line num="81" type="stmt" count="1"/>
       <metrics loc="82" ncloc="76" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="38" elements="44" coveredelements="44"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Dice/DiceGraphicalDiceTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Dice/DiceGraphicalDiceTest.php">
       <class name="App\Models\Dice\DiceGraphicalDiceTest" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
       </class>
@@ -168,7 +164,7 @@
       <line num="33" type="stmt" count="1"/>
       <metrics loc="34" ncloc="28" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Dice/DiceHumanPlayerTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Dice/DiceHumanPlayerTest.php">
       <class name="App\Models\Dice\DiceHumanPlayerTest" namespace="global">
         <metrics complexity="3" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
       </class>
@@ -185,7 +181,7 @@
       <line num="35" type="stmt" count="1"/>
       <metrics loc="36" ncloc="29" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="11" coveredelements="11"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Dice/DiceNewDiceHandTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Dice/DiceNewDiceHandTest.php">
       <class name="App\Models\Dice\DiceNewDiceHandTest" namespace="global">
         <metrics complexity="9" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="35" elements="40" coveredelements="40"/>
       </class>
@@ -231,7 +227,7 @@
       <line num="73" type="stmt" count="1"/>
       <metrics loc="74" ncloc="68" classes="1" methods="5" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="35" coveredstatements="35" elements="40" coveredelements="40"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Dice/DicePlayerTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Dice/DicePlayerTest.php">
       <class name="App\Models\Dice\DicePlayerTest" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="27" coveredelements="27"/>
       </class>
@@ -264,7 +260,7 @@
       <line num="49" type="stmt" count="1"/>
       <metrics loc="50" ncloc="44" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="27" coveredelements="27"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Yatzy/YatzyYatzyColumnTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Yatzy/YatzyYatzyColumnTest.php">
       <class name="App\Models\Yatzy\YatzyYatzyColumnTest" namespace="global">
         <metrics complexity="11" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="104" coveredstatements="104" elements="113" coveredelements="113"/>
       </class>
@@ -383,7 +379,7 @@
       <line num="171" type="stmt" count="1"/>
       <metrics loc="172" ncloc="161" classes="1" methods="9" coveredmethods="9" conditionals="0" coveredconditionals="0" statements="104" coveredstatements="104" elements="113" coveredelements="113"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Yatzy/YatzyYatzyGameTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Yatzy/YatzyYatzyGameTest.php">
       <class name="App\Models\Yatzy\YatzyYatzyGameTest" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
       </class>
@@ -396,7 +392,7 @@
       <line num="28" type="stmt" count="1"/>
       <metrics loc="29" ncloc="23" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Yatzy/YatzyYatzyPlayerTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Yatzy/YatzyYatzyPlayerTest.php">
       <class name="App\Models\Yatzy\YatzyYatzyPlayerTest" namespace="global">
         <metrics complexity="2" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
       </class>
@@ -408,7 +404,7 @@
       <line num="27" type="stmt" count="1"/>
       <metrics loc="28" ncloc="22" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="4" elements="6" coveredelements="6"/>
     </file>
-    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/orm/tests/Unit/Yatzy/YatzyYatzyTableTest.php">
+    <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/Unit/Yatzy/YatzyYatzyTableTest.php">
       <class name="App\Models\Yatzy\YatzyYatzyTableTest" namespace="global">
         <metrics complexity="7" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="45" elements="51" coveredelements="51"/>
       </class>
@@ -465,6 +461,6 @@
       <line num="93" type="stmt" count="1"/>
       <metrics loc="94" ncloc="88" classes="1" methods="6" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="45" elements="51" coveredelements="51"/>
     </file>
-    <metrics files="14" loc="791" ncloc="702" classes="14" methods="46" coveredmethods="46" conditionals="0" coveredconditionals="0" statements="334" coveredstatements="334" elements="380" coveredelements="380"/>
+    <metrics files="14" loc="780" ncloc="696" classes="13" methods="45" coveredmethods="44" conditionals="0" coveredconditionals="0" statements="331" coveredstatements="328" elements="376" coveredelements="372"/>
   </project>
 </coverage>
