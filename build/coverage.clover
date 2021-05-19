@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1621463154">
-  <project timestamp="1621463154">
+<coverage generated="1621463857">
+  <project timestamp="1621463857">
     <file name="/home/nesko/Dropbox/Db_dbwebb-kurser/mvc/me/ci/tests/CreatesApplication.php">
       <class name="Tests\CreatesApplication" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
