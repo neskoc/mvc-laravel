@@ -1,3 +1,10 @@
+ ------ ------------------------------------------------------------------------- 
+  Line   app/Models/HighScore.php                                                 
+ ------ ------------------------------------------------------------------------- 
+  32     Call to an undefined static method App\Models\HighScore::orderByDesc().  
+  33     Call to an undefined static method App\Models\HighScore::raw().          
+  33     Call to an undefined static method App\Models\HighScore::select().       
+ ------ ------------------------------------------------------------------------- 
 
- [OK] No errors                                                                                                         
+ [ERROR] Found 3 errors                                                                                                 
 
