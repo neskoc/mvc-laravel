@@ -18,7 +18,7 @@ final class YatzyYatzyTableTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->yatzyTable = new YatzyTable(2);
+        $this->yatzyTable = new YatzyTable(1);
     }
 
     public function testCreateYatzyPlayerClass(): void
@@ -59,18 +59,17 @@ final class YatzyYatzyTableTest extends TestCase
     public function testShowYatzyTable(): void
     {
         $yatzyGame = new YatzyGame();
-        $yatzyGame->currentPlayer = new YatzyPlayer(1, 'Name for test');
+        $yatzyGame->yatzyPlayers[1] = new YatzyPlayer(1, 'Name for test');
+        $yatzyGame->currentPlayer = $yatzyGame->yatzyPlayers[1];
         $lastHand = [1, 2, 3, 4, 5];
         $this->yatzyTable->setLastHand($lastHand);
-        $thead = '<thead><tr><th class="right">SPELARE </th><th class="center">Spelare 1</th>' .
-            '<th class="center">Spelare 2</th></tr></thead>';
+        $thead = '<thead><tr><th></th><th class="center">Name for test</th></tr></thead>';
         $this->assertStringContainsString(
             $thead,
             $this->yatzyTable->showYatzyTable($this->yatzyTable, $yatzyGame, false)
         );
 
-        $thead = '<thead><tr><th class="right">SPELARE </th><th class="center">Spelare 1</th>' .
-            '<th class="center">Spelare 2</th><th class="center">Val</th></tr></thead>';
+        $thead = '<thead><tr><th></th><th class="center">Name for test</th><th class="center">Val</th></tr></thead>';
         $this->assertStringContainsString(
             $thead,
             $this->yatzyTable->showYatzyTable($this->yatzyTable, $yatzyGame, true)
@@ -79,16 +78,14 @@ final class YatzyYatzyTableTest extends TestCase
         for ($i = 0; $i < $this->yatzyTable::ROWS; $i += 1) {
             $this->yatzyTable->currentColumn->occupiedSlots[$i] = true;
         }
-        $thead = '<thead><tr><th class="right">SPELARE </th><th class="center">Spelare 1</th>' .
-            '<th class="center">Spelare 2</th><th class="center">Val</th></tr></thead>';
+        $thead = '<thead><tr><th></th><th class="center">Name for test</th><th class="center">Val</th></tr></thead>';
         $this->assertStringContainsString(
             $thead,
             $this->yatzyTable->showYatzyTable($this->yatzyTable, $yatzyGame, true)
         );
 
         $this->yatzyTable->currentColumn->occupiedSlots[$this->yatzyTable::ROWS - 1] = false;
-        $thead = '<thead><tr><th class="right">SPELARE </th><th class="center">Spelare 1</th>' .
-            '<th class="center">Spelare 2</th><th class="center">Val</th></tr></thead>';
+        $thead = '<thead><tr><th></th><th class="center">Name for test</th><th class="center">Val</th></tr></thead>';
         $this->assertStringContainsString(
             $thead,
             $this->yatzyTable->showYatzyTable($this->yatzyTable, $yatzyGame, true)

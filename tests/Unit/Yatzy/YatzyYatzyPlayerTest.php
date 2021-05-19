@@ -18,7 +18,7 @@ final class YatzyYatzyPlayerTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->yatzyPlayer = new YatzyPlayer(0);
+        $this->yatzyPlayer = new YatzyPlayer(0, '');
     }
 
     public function testCreateYatzyPlayerClass(): void

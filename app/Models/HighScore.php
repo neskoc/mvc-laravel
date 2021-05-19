@@ -22,6 +22,9 @@ class HighScore extends Model
     */
     public $timestamps = true;
 
+    protected $player_name;
+    protected $score;
+
     public function getHighScoreList()
     {
         $data = [
