@@ -5,6 +5,8 @@ namespace App\Routes;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Game21Controller;
 use App\Http\Controllers\YatzyController;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\HighScoreController;
 
 Route::get("/", [Game21Controller::class, 'start'])->name('game21');
 Route::prefix("/game21")->group(function () {
@@ -28,3 +30,6 @@ Route::prefix("/yatzy")->group(function () {
     Route::post("/save", [YatzyController::class, "saveHand"]);
     Route::get("/game-over", [YatzyController::class, "gameOver"])->name('game-over');
 });
+
+Route::get("/books", BookController::class)->name('books');
+Route::get("/high-score", HighScoreController::class)->name('high-score');
