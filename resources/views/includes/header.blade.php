@@ -13,7 +13,9 @@
 <header>
     <nav>
         <a href="{{ route("game21") }}">Game 21</a> |
-        <a href="{{ route("yatzy") }}">Yatzy</a>
+        <a href="{{ route("yatzy") }}">Yatzy</a> |
+        <a href="{{ route("books") }}">Books</a> |
+        <a href="{{ route("high-score") }}">High-scores</a>
     </nav>
 </header>
 <main>

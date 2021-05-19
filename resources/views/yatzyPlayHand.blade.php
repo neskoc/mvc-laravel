@@ -3,7 +3,10 @@
 <section>
     <h1>{{ $header ?? null }}</h1>
 
-    <h2>Spelare: {{ $playerNr ?? 1 }}, Omgång: {{ $round ?? 1 }},  Slag: {{ $rollNr ?? 1 }}</h2>
+    <h2>
+        Spelare {{ $playerNr ?? 1 }}: {{ $playerName }} 
+        <br>Omgång: {{ $round ?? 1 }},  Slag: {{ $rollNr ?? 1 }}
+    </h2>
 
     <form action="" method="POST">
         @csrf
