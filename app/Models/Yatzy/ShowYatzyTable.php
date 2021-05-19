@@ -12,7 +12,7 @@ trait ShowYatzyTable
 {
     private YatzyTable $yatzyTable;
 
-    public function showYatzyTable(YatzyTable $yatzyTable, bool $addRadioButtons = false): string
+    public function showYatzyTable(YatzyTable $yatzyTable, YatzyGame $yatzyGame, bool $addRadioButtons = false): string
     {
         $this->yatzyTable = $yatzyTable;
         $anySlotAAE = $yatzyTable->isAnySlotAvailableAllowedAndEnabled();
@@ -20,9 +20,9 @@ trait ShowYatzyTable
         $htmlTableBlock .= '<table class="table table-bordered">';
         $tableHeader = '<thead>';
         $tableHeader .= "<tr>";
-        $tableHeader .= '<th class="right">SPELARE </th>';
+        $tableHeader .= '<th></th>';
         for ($i = 1; $i <= $yatzyTable->nrYazyColumns; $i += 1) {
-            $tableHeader .= '<th class="center">Spelare ' . "{$i}</th>";
+            $tableHeader .= '<th class="center">' . "{$yatzyGame->yatzyPlayers[$i]->name}</th>";
         }
         if ($addRadioButtons) {
             $tableHeader .= '<th class="center">Val</th>';

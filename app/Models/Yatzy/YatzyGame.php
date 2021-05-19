@@ -11,6 +11,7 @@ namespace App\Models\Yatzy;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Models\Dice\NewDiceHand;
+use App\Models\HighScore;
 
 class YatzyGame
 {
@@ -52,13 +53,14 @@ class YatzyGame
             $this->nrOfPlayers = (int) $_POST['nrOfPlayers'];
 
             for ($i = 1; $i <= $this->nrOfPlayers; $i += 1) {
-                $this->yatzyPlayers[$i] = new YatzyPlayer($i);
+                $playerName = ($_POST["player{$i}"] !== '' ? $_POST["player{$i}"] : "player{$i}");
+                $this->yatzyPlayers[$i] = new YatzyPlayer($i, $playerName);
             }
             $this->currentPlayer = $this->yatzyPlayers[$this->playerNr];
             $this->yatzyTable = new YatzyTable($this->nrOfPlayers);
             $this->round = 1;
         } else {
-            $yatzyTable = $this->yatzyTable->showYatzyTable($this->yatzyTable);
+            $yatzyTable = $this->yatzyTable->showYatzyTable($this->yatzyTable, $this);
         }
         $yatzyTable = $yatzyTable ?? '';
 
@@ -76,6 +78,7 @@ class YatzyGame
             "table" => $yatzyTable,
             "round" => $this->round,
             "playerNr" => $this->playerNr,
+            "playerName" => $this->currentPlayer->name,
             "rollNr" => $this->rollNr,
             "hand" => $this->showHandChoices($this->diceHand->getLastGraphicalHand()),
             "debug" => ''
@@ -128,9 +131,10 @@ class YatzyGame
         $data = [
             "header" => "Yatzy (spara)",
             "message" => '',
-            "table" => $this->yatzyTable->showYatzyTable($this->yatzyTable, true),
+            "table" => $this->yatzyTable->showYatzyTable($this->yatzyTable, $this, true),
             "round" => $this->round,
             "playerNr" => $this->playerNr,
+            "playerName" => $this->currentPlayer->name,
             "rollNr" => $this->rollNr,
             "hand" => $this->showHandChoices($this->diceHand->getLastGraphicalHand(), false),
             "debug" => '' // $debug
@@ -142,12 +146,16 @@ class YatzyGame
 
     public function gameOver()
     {
-        $yatzyTable = $this->yatzyTable->showYatzyTable($this->yatzyTable);
+        $yatzyTableAsStr = $this->yatzyTable->showYatzyTable($this->yatzyTable, $this);
+        $highScore = new HighScore();
+        for ($i = 0; $i < $this->nrOfPlayers; $i += 1) {
+            $highScore->savePlayerScore($this->yatzyPlayers[$i + 1]->name, $this->yatzyTable->yatzyColumns[$i]->total);
+        }
 
         $data = [
             "header" => "Yatzy (slut)",
             "message" => 'Spelet är slut!',
-            "table" => $yatzyTable,
+            "table" => $yatzyTableAsStr,
             "round" => $this->round,
             "debug" => ''
         ];

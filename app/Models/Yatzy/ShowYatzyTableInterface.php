@@ -10,5 +10,5 @@ namespace App\Models\Yatzy;
 
 interface ShowYatzyTableInterface
 {
-    public function showYatzyTable(YatzyTable $yatzyTable): string;
+    public function showYatzyTable(YatzyTable $yatzyTable, YatzyGame $yatzyGame): string;
 }

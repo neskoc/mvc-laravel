@@ -11,9 +11,11 @@ namespace App\Models\Yatzy;
 class YatzyPlayer
 {
     public int $playerNr;
+    public string $name;
 
-    public function __construct(int $playerNr)
+    public function __construct(int $playerNr, string $name)
     {
         $this->playerNr = $playerNr;
+        $this->name = $name;
     }
 }
