@@ -71,15 +71,17 @@ class Game
     {
         $lost = false;
 
-        $playComputerHand = false;
+        $playComputerHand = true;
+        $rollAndPost = false;
         if (isset($_POST['roll']) || isset($_POST['playHand'])) {
             $lost = $this->playHumanHand();
-            if ($this->humanPlayer->getRoundScore() === 21) {
-                $playComputerHand = true;
-            }
-        } else {
+            $playComputerHand = false;
+            $rollAndPost = true;
+        }
+        if ($rollAndPost && $this->humanPlayer->getRoundScore() === 21) {
             $playComputerHand = true;
         }
+
         if ($playComputerHand) {
             $computerRolls = $this->playComputerHand();
 
@@ -118,14 +120,15 @@ class Game
         if (!$lost && !isset($_POST['stop']) && !$playComputerHand) {
             $request->session()->put('game', serialize($this));
             $view = view("hand", $data);
-        } else {
-            $this->addWin($lost);
-            $request->session()->put('game', serialize($this));
-            $data["header"] = "Result round {$this->rounds}";
-            $data["score"] = $this->getScore();
-            $data["result"] = $lost ? "You lost this round" : "You won this round";
-            $view = view("result", $data);
+            return $view;
         }
+
+        $this->addWin($lost);
+        $request->session()->put('game', serialize($this));
+        $data["header"] = "Result round {$this->rounds}";
+        $data["score"] = $this->getScore();
+        $data["result"] = $lost ? "You lost this round" : "You won this round";
+        $view = view("result", $data);
 
         return $view;
     }
