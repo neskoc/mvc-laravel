@@ -205,20 +205,20 @@ class YatzyColumn implements YatzyColumnInterface
         return $pairValues;
     }
 
-    private function valueOfXOfAKind(array $arrayCountValues, int $x): int
+    private function valueOfXOfAKind(array $arrayCountValues, int $testedVal): int
     {
         $returnValue = 0;
         foreach ($arrayCountValues as $key => $value) {
-            if ($value === $x) {
+            if ($value === $testedVal) {
                 $returnValue = (int) $key;
             }
         }
         return $returnValue;
     }
 
-    private function countXOfAKind(array $arrayCountValues, int $x): int
+    private function countXOfAKind(array $arrayCountValues, int $testedVal): int
     {
-        return count(array_keys(array_values($arrayCountValues), $x));
+        return count(array_keys(array_values($arrayCountValues), $testedVal));
     }
 
     private function nrOfPairs(array $arrayCountValues): int
@@ -253,15 +253,15 @@ class YatzyColumn implements YatzyColumnInterface
 
     public function isAnySlotAvailableAllowedAndEnabled(array $hand): bool
     {
-        $availableAllowedAndEnabled = false;
+        $availableAllowedEnabled = false;
         // exclude chance
         for ($i = 0; $i < $this::ROWS - 1; $i += 1) {
             if (!$this->disabledSlots[$i] && !$this->occupiedSlots[$i] && $this->isSlotAllowed($i, $hand)) {
-                $availableAllowedAndEnabled = true;
+                $availableAllowedEnabled = true;
                 break;
             }
         }
-        return $availableAllowedAndEnabled;
+        return $availableAllowedEnabled;
     }
 
     public function isChanceAvailableAndEnabled(): bool
